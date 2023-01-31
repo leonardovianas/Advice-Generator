@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title> Advice-Generator</title>
+
+
+</head>
+<body>
+  <div class="fundo-video">
+    <video class="video" autoplay loop muted>
+      <source src="./images/back-cosmos.mp4" type="video/mp4" />
+    </video>
+  </div>
+    <div class="advice-card">
+      <div class="card-container">
+        <p>Advice #<span id="advice-id"></span></p>
+        <h2>"<span id="advice-text"></span>"</h2>
+      <picture>
+        <source media="(min-width:500px)" src="images/pattern-divider-mobile.svg">
+        <img src="./images/pattern-divider-desktop.svg" alt="pattern">
+      </picture>
+      <button id="generate-btn">
+        <img src="./images/icon-dice.svg" alt="dice">
+      </button>
+      </div>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+@import url(https://fonts.google.com/specimen/Manrope);
+
+:root{
+    --LightCyan: hsl(193, 38%, 86%);
+    --NeonGreen: hsl(150, 100%, 66%);
+    --GrayishBlue: hsl(217, 19%, 38%);
+    --DarkGrayishBlue: hsl(217, 19%, 24%);
+    --DarkBlue: hsl(218, 23%, 16%);
+}
+
+*{
+    font-family: 'Manrope', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./images/back-cosmos.mp4);
+}
+
+.fundo-video {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.fundo-video .video {
+    height: 100vh;
+}
+
+.fundo-video::after {
+    content: "";
+    background-color: #d5011d;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgb(0,0,0,1) 0%, rgb(0,0,0,0.8) 50%, rgb(0,0,0,1) 100%);
+
+}
+.advice-card {
+    width: 500px;
+    background-color: var(--DarkGrayishBlue);
+    border-radius: 1rem;
+    position: relative;
+}
+
+.card-container {
+    padding: 2rem 3rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
+}
+
+p{
+    color: var(--NeonGreen);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 12px;
+
+}
+
+h2{
+    color: var(--LightCyan);
+    font-size: 28px;
+}
+
+picture img {
+    margin-bottom: 1rem;
+}
+
+button {
+    position: absolute;
+    bottom: -30px;
+    background-color: var(--NeonGreen);
+    border: none;
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {
+    filter: drop-shadow(0 0 0.75rem hsl(150, 100%, 66%));
+    transition: all 0.2s ease-out;
+}
+
+@media screen and (max-width:500px) {
+    .advice-card {
+        width: 350px;
+    }
+}
